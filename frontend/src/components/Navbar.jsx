@@ -3,7 +3,7 @@ import { useAuthStore } from '../store/useAuthStore'
 import { Link } from 'react-router-dom';
 import { LogOut, MessageSquare, Settings, User } from 'lucide-react';
 
-const NavBar = () => {
+const Navbar = () => {
   const {logout, authUser} = useAuthStore();
   return (
     <header className="bg-base  border-b border-base-300 fixed w-full top-0 z-40 backdrop-blur-lg bg-base-100/80">
@@ -50,4 +50,5 @@ const NavBar = () => {
   )
 }
 
-export default NavBar
+export default Navbar;
+

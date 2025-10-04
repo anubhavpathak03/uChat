@@ -29,16 +29,13 @@ app.use("/auth/user", userRouter);
 app.use("/auth/messages", messageRoutes);
 
 
-
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "../../frontend/dist")));
+  app.use(express.static(path.join(__dirname, "../frontend/dist")));
 
   app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "../../frontend", "dist", "index.html"));
+    res.sendFile(path.join(__dirname, "../frontend", "dist", "index.html"));
   });
 }
-
-
 
 server.listen(PORT, () => {
     console.log(`Server is UP and listening on PORT: ${PORT}`);
